@@ -1,7 +1,7 @@
 body {
   font-family: Urbanist;
-  color: aliceblue;
-  background-image: url(https://i.pinimg.com/564x/ee/37/53/ee375378c20d4813c7e9564b50b6e010.jpg);
+  color: #9f88df;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/833/original/ee375378c20d4813c7e9564b50b6e010.jpg?1728411816);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9,11 +9,13 @@ body {
 
 h1 {
   text-align: center;
+  font-family: Tiny5;
+  font-size: 55px;
 }
 
-a.redirect {
+a.main-page {
   text-decoration: none;
-  color: #ffff;
+  color: #dc5c00;
 }
 .clock-container {
   border: 5px solid #0000;
@@ -41,7 +43,7 @@ a.redirect {
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0)
   );
-  color: #dbd8e3;
+  color: #9f88df;
   display: block;
   border: none;
   font-size: 15px;
@@ -55,21 +57,24 @@ a.redirect {
 
 .main-city {
   display: flex;
-  justify-content: space-between;
   margin: 20px 0;
-  padding: 20px 0;
-  border-bottom: 1px dashed #dbd8e3;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-bottom: 1px dashed #dc5c00;
+  max-width: 600px;
 }
 
 .date {
+  flex: 0 0 auto;
   position: relative;
-  top: 60px;
-  right: 200px;
-  color: #dbd8e3;
+  color: #9f88df;
   font-size: 15px;
+  max-width: 300px;
+  opacity: 0.5;
 }
 
 .local-time {
+  flex: 0 0 auto;
   font-size: 30px;
   font-weight: 700;
   position: relative;
@@ -78,6 +83,7 @@ a.redirect {
 
 footer {
   text-align: center;
+  margin-top: 30px;
 }
 
 footer a {

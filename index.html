@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" type="text/css" href="src/styles.css" />
@@ -20,7 +26,7 @@
         <a
           href="https://adriana-codes-worldclock.netlify.app/"
           target="_self"
-          class="redirect"
+          class="main-page"
           >World Clock</a
         >⏳
       </h1>
@@ -36,25 +42,30 @@
 
       <div id="time-selection">
         <div class="main-city">
-          <h2>Barcelona</h2>
-          <div class="date" id="barcelona-date"></div>
+          <div>
+            <h2>Barcelona</h2>
+            <div class="date" id="barcelona-date"></div>
+          </div>
           <div class="local-time" id="barcelona-time"></div>
         </div>
         <div class="main-city">
-          <h2>San Juan</h2>
-          <div class="date" id="sanjuan-date"></div>
+          <div>
+            <h2>San Juan</h2>
+            <div class="date" id="sanjuan-date"></div>
+          </div>
           <div class="local-time" id="sanjuan-time"></div>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/adriana-codes/worldclock" target="_blank"
+          >Open sourced</a
+        >
+        project by
+        <a href="https://github.com/adriana-codes" target="_blank">Adri Díaz</a>
+        👩🏻‍💻
+      </footer>
     </div>
-    <footer>
-      <a href="https://github.com/adriana-codes/worldclock" target="_blank"
-        >Open sourced</a
-      >
-      project by
-      <a href="https://github.com/adriana-codes" target="_blank">Adri Díaz</a>
-      👩🏻‍💻
-    </footer>
+
     <script src="src/script.js"></script>
   </body>
 </html>
