@@ -16,25 +16,33 @@
   </head>
   <body>
     <div class="clock-container">
-      <h1>World Clock ⏳</h1>
-      <select class="select-form">
+      <h1>
+        <a href="https://adriana-codes-worldclock.netlify.app/" target="_self"
+          >World Clock</a
+        >
+        ⏳
+      </h1>
+      <select class="select-form" id="cities">
         <option value="">Select a city...</option>
-        <option value="">Berlin</option>
-        <option value="">New York</option>
-        <option value="">Oklahoma</option>
-        <option value="">London</option>
-        <option value="">Japan</option>
+        <option value="current">My current timezone</option>
+        <option value="Europe/Berlin">Berlin</option>
+        <option value="America/New_York">New York</option>
+        <option value="America/Chicago">Chicago</option>
+        <option value="Europe/London">London</option>
+        <option value="Asia/Tokyo">Tokyo</option>
       </select>
 
-      <div class="city">
-        <h2>Barcelona</h2>
-        <div class="date"></div>
-        <div class="local-time"></div>
-      </div>
-      <div class="city">
-        <h2>San Juan</h2>
-        <div class="date"></div>
-        <div class="local-time"></div>
+      <div id="time-selection">
+        <div class="main-city">
+          <h2>Barcelona</h2>
+          <div class="date" id="barcelona-date"></div>
+          <div class="local-time" id="barcelona-time"></div>
+        </div>
+        <div class="main-city">
+          <h2>San Juan</h2>
+          <div class="date" id="sanjuan-date"></div>
+          <div class="local-time" id="sanjuan-time"></div>
+        </div>
       </div>
     </div>
     <footer>
