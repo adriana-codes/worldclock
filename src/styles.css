@@ -34,7 +34,7 @@ a.main-page {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 0 30px 50px rgba(225, 101, 18, 0.374);
 }
 
 .select-form {
@@ -78,12 +78,18 @@ a.main-page {
   font-weight: 700;
   position: relative;
   bottom: -30px;
+  align-items: center;
+}
+
+.main-city:last-child {
+  border: none;
 }
 
 footer {
   text-align: center;
   font-size: smaller;
   margin-top: 30px;
+  opacity: 0.7;
 }
 
 footer a {

@@ -1,45 +1,46 @@
 function displayTime() {
-  let barcelonaDate = document.querySelector("#barcelona-date");
-  barcelonaDate.innerHTML = `${moment()
-    .tz("Europe/Madrid")
-    .format("ddd, MMMM D, YYYY")}`;
+  let barcelonaElement = document.querySelector("#barcelona");
+  if (barcelonaElement) {
+    let barcelonaDateElement = barcelonaElement.querySelector(".date");
+    let barcelonaTimeElement = barcelonaElement.querySelector(".local-time");
+    let barcelonaTime = moment().tz("Europe/Madrid");
 
-  let sanjuanDate = document.querySelector("#sanjuan-date");
-  sanjuanDate.innerHTML = `${moment()
-    .tz("America/Puerto_Rico")
-    .format("ddd, MMMM D, YYYY")}`;
+    barcelonaDateElement.innerHTML = barcelonaTime.format("ddd, MMMM D, YYYY");
+    barcelonaTimeElement.innerHTML = barcelonaTime.format(
+      "H:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-  barcelonaTime = document.querySelector("#barcelona-time");
-  barcelonaTime.innerHTML = `${moment()
-    .tz("Europe/Madrid")
-    .format("H:mm:ss [<small>]A[</small>]")}`;
+  let sanjuanElement = document.querySelector("#sanjuan");
+  if (sanjuanElement) {
+    let sanjuanDateElement = sanjuanElement.querySelector(".date");
+    let sanjuanTimeElement = sanjuanElement.querySelector(".local-time");
+    let sanjuanTime = moment().tz("America/Puerto_Rico");
 
-  sanjuanTime = document.querySelector("#sanjuan-time");
-  sanjuanTime.innerHTML = `${moment()
-    .tz("America/Puerto_Rico")
-    .format("H:mm:ss [<small>]A[</small>]")}`;
+    console.log(sanjuanTime);
+
+    sanjuanDateElement.innerHTML = sanjuanTime.format("ddd, MMMM D, YYYY");
+    sanjuanTimeElement.innerHTML = sanjuanTime.format(
+      "H:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
-  if (event.target.value.length === 0) {
-    return;
-  }
-
   let city = event.target.value;
   if (city === "current") {
     city = moment.tz.guess();
   }
-
-  let cityName = city.replace("_", " ").split("/")[1].replace(/_/, " ");
-
+  let cityName = city.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(city);
   let citiesElement = document.querySelector("#time-selection");
   citiesElement.innerHTML = `<div class="main-city">
       <div><h2>${cityName}</h2>
-      <div class="date">${moment().tz(city).format("ddd, MMMM D, YYYY")}</div>
+      <div class="date">${cityTime.format("ddd, MMMM D, YYYY")}</div>
       </div>      
-      <div class="local-time">${moment()
-        .tz(city)
-        .format("H:mm:ss [<small>]A[</small>]")}</div>
+      <div class="local-time">${cityTime.format(
+        "H:mm:ss"
+      )} <small>${cityTime.format("A")}</small></div>
     </div>`;
 }
 
